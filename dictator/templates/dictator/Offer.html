@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Your Decision{% endblock %}
+
+{% block content %}
+
+<p>
+   You are <strong>Participant 1</strong>. You have been given 100 point as additional bonus. You have the possibility to send some, all, or nothing to <strong>Participant 2</strong> that you have randomly been paired with. <strong>Participant 2</strong> has not received any point as additional bonus. Point you will have after your decision is 100 point minus the amount you send to <strong>Participant 2</strong>. <strong>Participant 2</strong> will only have the amount you send. Please state the amount of money (an integer in 100, not less than 0 and not larger than 100) you would like to send to <strong>Participant 2</strong>.<br>
+(rate: 100 point = 1 dollar)<br>
+(participation fee: 0.5 dollar)<br>
+(additional bonus: 100 point)
+</p>
+
+{% formfield player.send label="I will send" %}
+
+{% next_button %}
+
+
+
+{% endblock %}

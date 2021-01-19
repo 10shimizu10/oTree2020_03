@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+
+<p>
+
+        You decided to keep <strong>{{ offer }}</strong> for yourself.
+
+    {% next_button %}
+</p>
+{% include Constants.instructions_template %}
+
+{% endblock %}
